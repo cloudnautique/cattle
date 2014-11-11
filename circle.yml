@@ -6,4 +6,4 @@ dependencies:
     - echo "skip inferred"
 test:
   override:
-    - make
+    - make -j4 -d
