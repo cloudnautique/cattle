@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 
 if [ -z "$BUG_INCEPTION" ]; then
     # Work around issue https://github.com/dotcloud/docker/issues/4854
