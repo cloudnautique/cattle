@@ -13,7 +13,7 @@ RUN git clone --recursive https://github.com/cattleio/cattle.git /opt/cattle-git
 RUN apt-get update && apt-get install -y npm
 ENV HOME /root
 RUN cd /opt/cattle-git && \
-    mvn install && \
-    mvn dependency:go-offline && \
-    mv /root/.m2 /opt/m2-base && \
-    rm -rf /opt/m2-base/repository/io/github/cattle
+RUN mvn install 
+RUN mvn dependency:go-offline 
+RUN mv /root/.m2 /opt/m2-base
+RUN rm -rf /opt/m2-base/repository/io/github/cattle
