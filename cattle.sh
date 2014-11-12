@@ -12,7 +12,10 @@ fi
 BASE=$(dirname $0)
 cd $BASE
 
-trap fixperms EXIT
+#trap fixperms EXIT
+
+echo "${BUILD_USER_ID}"
+echo $(whoami)
 
 fixperms()
 {
